@@ -17,6 +17,43 @@ body {
   flex: 1;
   margin-right: 40px;
 }
+
+.container .leftSide h1 {
+  margin: 0;
+  font-size: 40px;
+  color: #3a4b5c;
+}
+.container .leftSide p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #6a7d8b;
+}
+.container .leftSide input {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid rgba(150, 163, 175, 0.5);
+  padding: 10px 2px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  outline: 0;
+}
+.container .leftSide button {
+  width: 100%;
+  background-color: #227c9d;
+  color: #fff;
+  font-size: 15px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 40px;
+  padding: 15px 0px;
+  cursor: pointer;
+  transition: all ease .2s;
+}
+.container .leftSide button:hover {
+  opacity: 0.8;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 .container .rightSide {
   flex: 1;
   margin-left: 40px;
