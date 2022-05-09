@@ -10,6 +10,7 @@ const App = () => {
 
   const handleCalculation = () => {
     if (height !== 0 && weight !== 0 && height && weight) {
+      calculateIMC(height, weight);
     } else {
       alert("Preencha todos os campos");
     }
@@ -48,7 +49,7 @@ const App = () => {
         <div className={styles.rightSide}>
           <div className={styles.grid}>
             {levels.map((item, key) => (
-              <GridItem key={key} item={item}/>
+              <GridItem key={key} item={item} />
             ))}
           </div>
         </div>
