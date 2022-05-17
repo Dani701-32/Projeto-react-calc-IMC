@@ -1,20 +1,29 @@
 import { useState } from "react";
 import styles from "./App.module.css";
 import poweredImage from "./assets/powered.png";
-import { levels, calculateIMC } from "./helpers/imc";
+import leftArrowIMG from "./assets/leftarrow.png";
+import { levels, calculateIMC, Level } from "./helpers/imc";
 import { GridItem } from "./components/GridItem";
 
 const App = () => {
   const [height, setHeight] = useState<number>(0);
   const [weight, setWeight] = useState<number>(0);
+  const [toShow, setToShow] = useState<Level | null>();
 
   const handleCalculation = () => {
     if (height !== 0 && weight !== 0 && height && weight) {
-      calculateIMC(height, weight);
+      setToShow(calculateIMC(height, weight));
     } else {
       alert("Preencha todos os campos");
     }
   };
+
+  const setHandleBackButton = () => {
+    setToShow(null);
+    setHeight(0);
+    setWeight(0);
+  };
+
   return (
     <div className={styles.main}>
       <header>
@@ -47,11 +56,21 @@ const App = () => {
           <button onClick={handleCalculation}>Calcular</button>
         </div>
         <div className={styles.rightSide}>
-          <div className={styles.grid}>
-            {levels.map((item, key) => (
-              <GridItem key={key} item={item} />
-            ))}
-          </div>
+          {!toShow && (
+            <div className={styles.grid}>
+              {levels.map((item, key) => (
+                <GridItem key={key} item={item} />
+              ))}
+            </div>
+          )}
+          {toShow && (
+            <div className={styles.rightBig}>
+              <div onClick={setHandleBackButton} className={styles.rightArrow} >
+                <img src={leftArrowIMG} alt="" width={25} />
+              </div>
+              <GridItem item={toShow} />
+            </div>
+          )}
         </div>
       </div>
     </div>

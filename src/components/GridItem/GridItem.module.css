@@ -8,6 +8,7 @@
   flex-direction: column;
   padding: 20px;
 }
+
 .gridIcon {
   width: 70px;
   height: 70px;
@@ -17,12 +18,19 @@
   justify-content: center;
   align-items: center;
 }
+
 .gridTitle {
   font-size: 25px;
   font-weight: bold;
   margin-top: 5px;
 }
-.gridInfo{
-    font-size:12px;
-    margin-top: 15px;
+
+.gridInfo {
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.yourIMC {
+  font-size: 17px;
+  margin: 10px 0 40px 0;
 }

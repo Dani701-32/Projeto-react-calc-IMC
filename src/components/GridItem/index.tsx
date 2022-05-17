@@ -14,6 +14,10 @@ export const GridItem = ({ item }: Props) => {
         <img src={item.icon === "up" ? upImage : downImage} alt="" width="30" />
       </div>
       <div className={style.gridTitle}>{item.title}</div>
+      {
+      item.yourIMC && 
+        <div className= {style.yourIMC}> Seu IMC é de {item.yourIMC} kg/m²</div>
+        }
       <div className={style.gridInfo}>
         <>
           IMC está entre <strong>{item.imc[0]}</strong> e <strong>{item.imc[1]}</strong>

@@ -1,18 +1,22 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .headerContainer {
   max-width: 900px;
   margin: 40px auto;
 }
+
 .container {
   max-width: 900px;
   display: flex;
   margin: auto;
 }
+
 /***************************************************************************************************************************************************************************************/
 .container .leftSide {
   flex: 1;
@@ -24,11 +28,13 @@ body {
   font-size: 40px;
   color: #3a4b5c;
 }
+
 .container .leftSide p {
   font-size: 16px;
   margin-bottom: 40px;
   color: #6a7d8b;
 }
+
 .container .leftSide input {
   width: 100%;
   border: 0;
@@ -38,6 +44,7 @@ body {
   font-size: 14px;
   outline: 0;
 }
+
 .container .leftSide button {
   width: 100%;
   background-color: #227c9d;
@@ -50,9 +57,11 @@ body {
   cursor: pointer;
   transition: all ease 0.2s;
 }
+
 .container .leftSide button:hover {
   opacity: 0.8;
 }
+
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .container .rightSide {
@@ -60,9 +69,33 @@ body {
   margin-left: 40px;
   display: flex;
 }
+
 .container .rightSide .grid {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+.container .rightSide .rightBig {
+  flex: 1;
+  display: flex;
+}
+.container .rightSide .rightArrow {
+  position: absolute;
+  background-color: #227c9d;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left:-35px;
+  margin-top: 140px;
+  transition: all ease .3s; 
+  opacity: .8;
+}
+.container .rightSide .rightArrow:hover{
+  opacity: 1;
 }
