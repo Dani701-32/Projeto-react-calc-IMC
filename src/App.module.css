@@ -44,6 +44,9 @@ body {
   font-size: 14px;
   outline: 0;
 }
+.container .leftSide input:disabled{
+  opacity: .5;
+}
 
 .container .leftSide button {
   width: 100%;
@@ -60,6 +63,9 @@ body {
 
 .container .leftSide button:hover {
   opacity: 0.8;
+}
+.container .leftSide button:disabled{
+  opacity: .5;
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -99,3 +105,4 @@ body {
 .container .rightSide .rightArrow:hover{
   opacity: 1;
 }
+

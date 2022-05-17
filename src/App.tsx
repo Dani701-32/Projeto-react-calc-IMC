@@ -45,15 +45,19 @@ const App = () => {
             placeholder="Digite a sua altura. Ex 1.5(em metros)"
             value={height > 0 ? height : ""}
             onChange={(e) => setHeight(parseFloat(e.target.value))}
+            disabled={toShow ? true : false}
           />
           <input
             type="number"
             placeholder="Digite o seu peso. Ex 60.3 (em quilos)"
             value={weight > 0 ? weight : ""}
             onChange={(e) => setWeight(parseFloat(e.target.value))}
+            disabled={toShow ? true : false}
           />
 
-          <button onClick={handleCalculation}>Calcular</button>
+          <button onClick={handleCalculation} disabled={toShow ? true : false}>
+            Calcular
+          </button>
         </div>
         <div className={styles.rightSide}>
           {!toShow && (
@@ -65,7 +69,7 @@ const App = () => {
           )}
           {toShow && (
             <div className={styles.rightBig}>
-              <div onClick={setHandleBackButton} className={styles.rightArrow} >
+              <div onClick={setHandleBackButton} className={styles.rightArrow}>
                 <img src={leftArrowIMG} alt="" width={25} />
               </div>
               <GridItem item={toShow} />
